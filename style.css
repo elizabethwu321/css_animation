@@ -1,0 +1,98 @@
+.sun-wrapper {
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	border: 1px solid black;
+	transition: background 4s ease-in-out;
+	background-color: lightblue;
+}
+
+.sun-wrapper:hover {
+	background-color: #ff2b0f;
+}
+
+.sun-wrapper:hover .sun {
+	background-color: red;
+	transform: translateY(200px);
+}
+
+.sun {
+	width: 200px;
+	height: 200px;
+	background-color: orange;
+	border-radius: 100px;
+	transition-property: background-color, transform; 
+	transition-duration: 4s, 4s;
+	transition-timing-function: ease-in-out, linear;
+}
+
+.moon-wrapper {
+	height: 200px;
+	width: 200px;
+	border: 1px solid blue;
+	background-color: black;
+	overflow: hidden;
+	animation-name: moonsky;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	animation-delay: 1s;
+}
+
+.moon {
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+	background-color: lightyellow;
+	animation-name: riseandset;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	animation-delay: 1s;
+}
+
+
+@keyframes riseandset {
+	from {
+		transform: translateY(-200px);
+	}
+
+	to {
+		transform: translateY(200px);
+		background-color: yellow;
+	}
+}
+
+@keyframes moonsky {
+	0% {
+		background-color: lightblue;
+	}
+
+	50% {
+		background-color: orange;
+	}
+
+	100% {
+		background-color: black;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
